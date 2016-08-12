@@ -3,7 +3,7 @@ import { Food } from './food.model';
 
 
 @Pipe ({
-  name: "calories-high-low",
+  name: "calorieshighlow",
   pure: false
 })
 

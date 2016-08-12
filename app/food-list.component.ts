@@ -20,7 +20,7 @@ import { CaloriesHighLowPipe } from "./calorieshighlow.pipe";
   <option value="high">Show High Calories</option>
 </select>
   <div class="row">
-    <food-display *ngFor="#currentFood of foodList | calories-high-low:selectedCalories"
+    <food-display *ngFor="#currentFood of foodList | calorieshighlow:selectedCalories"
     (click)="foodClicked(currentFood)"
     [food]="currentFood" class="col-lg-4">
     </food-display>
