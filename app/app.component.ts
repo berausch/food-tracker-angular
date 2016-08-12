@@ -1,30 +1,27 @@
  import { Component, EventEmitter } from "angular2/core";
- import { KegListComponent } from "./keg-list.component";
- import { Keg } from "./keg.model";
+ import { FoodListComponent } from "./food-list.component";
+ import { Food } from "./food.model";
 
  @Component ({
    selector: "my-app",
-   directives: [KegListComponent],
+   directives: [FoodListComponent],
    template: `
     <div class="container">
-      <h1>My House</h1>
-      <h2>Your very Local Bar</h2><br>
-      <h2>Your Keg List</h2>
+      <h1>Food Tracker</h1>
       <div class="row">
-        <keg-list [kegList]="kegs">
-        </keg-list>
+        <food-list [foodList]="foods">
+        </food-list>
       </div>
     </div>
    `
  })
 
  export class AppComponent {
-   public kegs: Keg[];
+   public foods: Food[];
    constructor() {
-     this.kegs = [
-       new Keg("Electric Chicken Pale Ale", "Coors", 5, 5.2),
-       new Keg("Beige Pulaski Day Old Ale", "Blue Moon", 6, 4.3),
-       new Keg("Glutinous Smurf Russian Stout", "Guinness", 7, 6.7)
+     this.foods = [
+       new Food("Grilled Chicken sandwich", "From new Cookbook!", 400),
+       new Food("Carrot Sticks", "10 of them", 50),
      ];
    }
  }
