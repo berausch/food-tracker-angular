@@ -20,8 +20,9 @@
    public foods: Food[];
    constructor() {
      this.foods = [
-       new Food("Grilled Chicken sandwich", "From new Cookbook!", 400),
+       new Food("Grilled Chicken sandwich", "From new Cookbook!", 600),
        new Food("Carrot Sticks", "10 of them", 50),
+       new Food("Diet Snapple", "1 bottle", 4),
      ];
    }
  }

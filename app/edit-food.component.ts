@@ -8,6 +8,7 @@ import { Food } from './food.model';
   template: `
     <h3>Edit Food</h3>
     <div class='food-object'>
+    <br>
       <h4 class='food'>Name<input [(ngModel)]="food.name" class="input-lg task-form"/></h4>
       <h4>Details<input [(ngModel)]="food.details" class="input-lg task-form"/></h4>
       <h4>Calories<input [(ngModel)]="food.calories" class="input-lg task-form"/><br></h4>

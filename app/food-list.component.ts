@@ -11,13 +11,17 @@ import { NewFoodComponent } from "./new-food.component";
   outputs: ['onFoodSelect'],
   directives: [FoodComponent, EditFoodComponent, NewFoodComponent],
   template: `
-  <food-display *ngFor="#currentFood of foodList"
-  (click)="foodClicked(currentFood)"
-  [food]="currentFood" class="col-lg-4">
-  </food-display>
-  <edit-food *ngIf="selectedFood" [food]="selectedFood">
-  </edit-food>
-  <new-food (onSubmitNewFood)="createFood($event)"></new-food>
+  <div class="container">
+  <div class="row">
+    <food-display *ngFor="#currentFood of foodList"
+    (click)="foodClicked(currentFood)"
+    [food]="currentFood" class="col-lg-4">
+    </food-display>
+  </div>  
+    <edit-food *ngIf="selectedFood" [food]="selectedFood">
+    </edit-food>
+    <new-food (onSubmitNewFood)="createFood($event)"></new-food>
+  </div>
   `
 })
 

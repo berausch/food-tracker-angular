@@ -5,7 +5,8 @@ import { Food } from "./food.model";
   selector: "new-food",
   outputs: ["onSubmitNewFood"],
   template: `
-    <h3>Create New Food</h3>
+  <br>
+    <h3>Create New Food Entry!</h3>
     <div class='food-form'>
       <h4>Name<input placeholder="Name" class="input-lg task-form" #newFoodName></h4>
       <h4>Details<input placeholder="Details" class="input-lg task-form" #newFoodDetails></h4>
