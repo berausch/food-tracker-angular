@@ -1,1 +1,58 @@
 
+.add-button {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.food-edit {
+  text-align: center;
+  border-width: 10px;
+  border-color: #B2E1FF;
+  border-style: solid;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  height: 400px;
+}
+
+
+.food-new {
+  text-align: center;
+  border-width: 10px;
+  border-color: #B2E1FF;
+  border-style: solid;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  height: 400px;
+
+}
+
+.food-object {
+  padding: 20px;
+  background-color: #B2E1FF;
+  margin: 10px;
+}
+
+.title-area {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 5px;
+}
+#page-title {
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 50px;
+  border-radius: 0px 30px 0px 30px;
+  border-width: 7px;
+  border-color: #B2E1FF;
+  border-style: solid;
+  width: 500px;
+  margin: auto;
+  margin-top: 20px;
+  padding: 10px;
+}

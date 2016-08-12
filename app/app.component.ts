@@ -7,11 +7,9 @@
    directives: [FoodListComponent],
    template: `
     <div class="container">
-      <h1>Food Tracker</h1>
-      <div class="row">
+      <h1 id="page-title">Food Tracker</h1>
         <food-list [foodList]="foods">
         </food-list>
-      </div>
     </div>
    `
  })

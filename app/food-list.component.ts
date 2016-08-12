@@ -14,20 +14,26 @@ import { CaloriesHighLowPipe } from "./calorieshighlow.pipe";
   directives: [FoodComponent, EditFoodComponent, NewFoodComponent],
   template: `
   <div class="container">
-  <select (change)="onChange($event.target.value)">
-  <option value="all"  selected="selected">Show All</option>
-  <option value="low">Show Low Calories</option>
-  <option value="high">Show High Calories</option>
-</select>
-  <div class="row">
-    <food-display *ngFor="#currentFood of foodList | calorieshighlow:selectedCalories"
-    (click)="foodClicked(currentFood)"
-    [food]="currentFood" class="col-lg-4">
-    </food-display>
-  </div>
-    <edit-food *ngIf="selectedFood" [food]="selectedFood">
-    </edit-food>
-    <new-food (onSubmitNewFood)="createFood($event)"></new-food>
+    <div class="title-area">
+      <select class="title-area" (change)="onChange($event.target.value)">
+        <option value="all"  selected="selected">Show All</option>
+        <option value="low">Show Low Calories</option>
+        <option value="high">Show High Calories</option>
+      </select>
+    </div>
+    <div class="row">
+      <food-display *ngFor="#currentFood of foodList | calorieshighlow:selectedCalories"
+      (click)="foodClicked(currentFood)"
+      [food]="currentFood" class="col-lg-4">
+      </food-display>
+    </div>
+    <div class="row">
+    <br>
+    <br>
+      <new-food (onSubmitNewFood)="createFood($event)"></new-food>
+      <edit-food *ngIf="selectedFood" [food]="selectedFood">
+      </edit-food>
+      </div>
   </div>
   `
 })

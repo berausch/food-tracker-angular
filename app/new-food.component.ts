@@ -5,14 +5,15 @@ import { Food } from "./food.model";
   selector: "new-food",
   outputs: ["onSubmitNewFood"],
   template: `
-  <br>
+
+  <div class='col-lg-6 food-new'>
     <h3>Create New Food Entry!</h3>
-    <div class='food-form'>
-      <h4>Name<input placeholder="Name" class="input-lg task-form" #newFoodName></h4>
-      <h4>Details<input placeholder="Details" class="input-lg task-form" #newFoodDetails></h4>
-      <h4>Calories: <input placeholder="Calories" class="input-lg task-form" #newFoodCalories><br></h4>
-      <h4><button (click)="addFood(newFoodName, newFoodDetails, newFoodCalories)">Submit</button></h4>
-    </div>
+    <br>
+    <h4>Name<br><input placeholder="Name" class="input-lg task-form" #newFoodName></h4>
+    <h4>Details<br><input placeholder="Details" class="input-lg task-form" #newFoodDetails></h4>
+    <h4>Calories<br><input placeholder="Calories" class="input-lg task-form" #newFoodCalories><br></h4>
+    <h4><button (click)="addFood(newFoodName, newFoodDetails, newFoodCalories)" class="btn-success btn-lg add-button">Submit</button></h4>
+  </div>
   `
 })
 
