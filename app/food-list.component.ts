@@ -1,38 +1,38 @@
 import { Component, EventEmitter } from "angular2/core";
-import { KegComponent } from "./keg.component";
-import { Keg } from "./keg.model";
-import { EditKegComponent } from "./edit-keg.component";
-import { NewKegComponent } from "./new-keg.component";
+import { FoodComponent } from "./food.component";
+import { Food } from "./food.model";
+import { EditFoodComponent } from "./edit-food.component";
+import { NewFoodComponent } from "./new-food.component";
 
 
 @Component ({
-  selector: "keg-list",
-  inputs: ["kegList"],
-  outputs: ['onKegSelect'],
-  directives: [KegComponent, EditKegComponent, NewKegComponent],
+  selector: "food-list",
+  inputs: ["foodList"],
+  outputs: ['onFoodSelect'],
+  directives: [FoodComponent, EditFoodComponent, NewFoodComponent],
   template: `
-  <keg-display *ngFor="#currentKeg of kegList"
-  (click)="kegClicked(currentKeg)"
-  [keg]="currentKeg" class="col-lg-4">
-  </keg-display>
-  <edit-keg *ngIf="selectedKeg" [keg]="selectedKeg">
-  </edit-keg>
-  <new-keg (onSubmitNewKeg)="createKeg($event)"></new-keg>
+  <food-display *ngFor="#currentFood of foodList"
+  (click)="foodClicked(currentFood)"
+  [food]="currentFood" class="col-lg-4">
+  </food-display>
+  <edit-food *ngIf="selectedFood" [food]="selectedFood">
+  </edit-food>
+  <new-food (onSubmitNewFood)="createFood($event)"></new-food>
   `
 })
 
-export class KegListComponent {
-  public kegList: Keg[];
-  public onKegSelect: EventEmitter<Keg>;
-  public selectedKeg: Keg;
+export class FoodListComponent {
+  public foodList: Food[];
+  public onFoodSelect: EventEmitter<Food>;
+  public selectedFood: Food;
   constructor() {
-    this.onKegSelect = new EventEmitter();
+    this.onFoodSelect = new EventEmitter();
   }
-  kegClicked(clickedKeg: Keg): void {
-    this.selectedKeg = clickedKeg;
-    this.onKegSelect.emit(clickedKeg);
+  foodClicked(clickedFood: Food): void {
+    this.selectedFood = clickedFood;
+    this.onFoodSelect.emit(clickedFood);
   }
-  createKeg(keg): void {
-    this.kegList.push(new Keg(keg.name, keg.brand, keg.alcoholContent, keg.price));
+  createFood(food): void {
+    this.foodList.push(new Food(food.name, food.details, food.calories));
   }
 }
