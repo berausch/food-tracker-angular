@@ -1,21 +1,19 @@
 import { Component, EventEmitter } from "angular2/core";
-import { Keg } from "./keg.model";
+import { Food } from "./food.model";
 
 
 @Component ({
-  selector: "keg-display",
-  inputs: ["keg"],
+  selector: "food-display",
+  inputs: ["food"],
   template: `
-    <div class="keg-object">
-      <h3 class="keg">{{ keg.name }}</h3>
-      <h4> {{ keg.brand }} - {{ keg.alcoholContent }}% <br></h4>
-      <br><h5>{{ keg.pints }} pints</h5>
-      <h4><button>Fill an order</button></h4><br>
-      <h3>$ {{ keg.price }}</h3>
+    <div class="food-object">
+      <h4>{{ food.name }}</h4>
+      <h4> {{ food.details }}</h4>
+      <h4>{{ food.calories }}</h4>
     </div>
   `
 })
 
-export class KegComponent {
-  public keg: Keg;
+export class FoodComponent {
+  public food: Food;
 }
